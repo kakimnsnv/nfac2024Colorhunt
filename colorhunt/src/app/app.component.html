@@ -1,0 +1,31 @@
+<!-- <div class="header">
+  <div class="left">
+    <a href="/" routerLink="/">Colorhunt</a>
+  </div>
+  <div class="middle filterContainer">
+    <div class="inputContainer flex">
+      <input type="text" class="input" placeholder="Search" [(ngModel)]="search" (keyup)="searchColors()" />
+    </div>
+    <div class="filterWindow dropdown hidden card">
+      <div class="color section">
+        <div class="title">Colors</div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="wrap main flex">
+  <div class="left">
+    <a href="/" class="tab button" tab="home" [attr.status]="active('/')">
+      <div class="icon" icon="popular"></div>Home
+    </a>
+    <a href="/saved" class="tab button" tab="saved" [attr.status]="active('/saved')">
+      <div class="icon" icon="like"></div>Saved
+    </a>
+    <a href="/new" class="tab button" tab="new" [attr.status]="active('/new')">
+      <div class="icon" icon="new"></div>New
+    </a>
+  </div>
+  <div class="page">
+    <router-outlet />
+  </div>
+</div>

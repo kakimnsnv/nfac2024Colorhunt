@@ -1,0 +1,76 @@
+<div *ngIf="palette; else create" class="item" [style.animation-delay.ms]="i! * 30">
+    <div class="palette">
+        <div class="place c3" [style.background-color]="palette.color1">
+            <a routerLink="/palette/{{palette!.id}}"></a><span #elem3
+                (click)="copy(palette.color1, elem3)">{{palette.color1}}</span>
+        </div>
+        <div class="place c2" [style.background-color]="palette.color2">
+            <a routerLink="/palette/{{palette!.id}}"></a><span #elem2
+                (click)="copy(palette.color2, elem2)">{{palette.color2}}</span>
+        </div>
+        <div class="place c1" [style.background-color]="palette!.color3">
+            <a routerLink="/palette/{{palette!.id}}"></a>
+            <span #elem1 (click)="copy(palette!.color3, elem1)">{{palette!.color3}}</span>
+        </div>
+        <div class="place c0" [style.background-color]="palette!.color4">
+            <a routerLink="/palette/{{palette!.id}}"></a><span #elem
+                (click)="copy(palette!.color4, elem)">{{palette!.color4}}</span>
+        </div>
+        <!-- <div class="place c3" [style.background-color]="palette.colors[0]">
+            <a routerLink="/palette/{{palette!.id}}"></a><span #elem3
+                (click)="copy(palette.colors[0], elem3)">{{palette.colors[0]}}</span>
+        </div>
+        <div class="place c2" [style.background-color]="palette.colors[1]">
+            <a routerLink="/palette/{{palette!.id}}"></a><span #elem2
+                (click)="copy(palette.colors[1], elem2)">{{palette.colors[1]}}</span>
+        </div>
+        <div class="place c1" [style.background-color]="palette!.colors[2]">
+            <a routerLink="/palette/{{palette!.id}}"></a>
+            <span #elem1 (click)="copy(palette!.colors[2], elem1)">{{palette!.colors[2]}}</span>
+        </div>
+        <div class="place c0" [style.background-color]="palette!.colors[3]">
+            <a routerLink="/palette/{{palette!.id}}"></a><span #elem
+                (click)="copy(palette!.colors[3], elem)">{{palette!.colors[3]}}</span>
+        </div> -->
+    </div>
+    <div class="flex">
+        <div class="actions flex">
+            <!-- <div class="button like" (click)="like(palette)" [attr.status]="isLiked(palette)"> -->
+            <div class="icon" icon="like"></div>
+            <span>{{palette!.likes}}</span>
+            <!-- </div> -->
+        </div>
+    </div>
+</div>
+
+<ng-template #create>
+    <!-- <div class="item">
+        <div class="palette">
+            {{palette!.colors}}
+            <div class="place c3" [style.background-color]="palette!.colors[2]">
+                <a routerLink="/palette/{{palette!.id}}"></a><span
+                    (click)="copy(palette!.colors[0])">{{palette!.colors[2]}}</span>
+            </div>
+            <div class="place c2" [ngStyle]="{'background-color': '{{red}}'}">
+                <a routerLink="/palette/{{palette!.id}}"></a><span (click)="copy(palette!.colors[1])">red</span>
+            </div>
+            <div class="place c1" [ngStyle]="{'background-color': '{{red}}'}">
+                <a routerLink="/palette/{{palette!.id}}"></a><span (click)="copy(palette!.colors[2])">red</span>
+            </div>
+            <div class="place c0" [ngStyle]="{'background-color': '{{red}}'}">
+                <a routerLink="/palette/{{palette!.id}}"></a><span (click)="copy(palette!.colors[3])">red</span>
+            </div>
+        </div>
+        <div class="palette">
+            <div class="place" *ngFor="let color of palette!.colors" [ngStyle]="{'background-color': '#{{color}}'}">
+                <a routerLink="/palette/{{palette!.id}}"></a><span (click)="copy(color)">#{{color}}</span>
+            </div>
+            <div class="place" (click)="openColorPicker(this)"></div>
+            <div class="place" style="background-color: #000000"><a href="/palette/000000"></a><span
+                    onclick="copy(this)" data-copy="#000000"></span></div>
+            <div class="place"><a></a><span onclick="copy(this)"></span></div>
+            <div class="place"><a></a><span onclick="copy(this)"></span></div>
+            <div class="place"><a></a><span onclick="copy(this)"></span></div>
+        </div>
+    </div> -->
+</ng-template>

@@ -1,0 +1,16 @@
+<div class="page">
+    <div class="single" style="display: block;">
+        <div class="singleItem" *ngIf="palette != undefined; else create">
+            <app-palette [i]="0" [palette]="palette" />
+        </div>
+    </div>
+</div>
+
+<ng-template #create>
+    <div class="singleItem">
+        <input id="color" type="color" title="colorpicker" [(ngModel)]="color">
+        {{color}}
+
+        <!-- <app-palette [i]="0" [palette]="{colors: ['000000', '000000', '000000', '000000', '000000'], likes: 0}" /> -->
+    </div>
+</ng-template>

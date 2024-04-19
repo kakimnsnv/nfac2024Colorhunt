@@ -1,0 +1,160 @@
+/* .palette{
+    max-width: 100%;
+    padding-bottom: 100%;
+    border-radius: 10px;
+    position: relative;
+    display: block;
+    margin-bottom: 14px;
+    overflow: hidden;
+}
+
+.place{
+    position: absolute;
+    width: 100%;
+    transform-origin: top;
+    background: grey; 
+    text-align: left;
+    border-radius: 20px 20px 0 0;
+}
+
+.c3{
+    padding-bottom: 100%;
+    animation-duration: 0s;
+    border-radius: 20px 20px 0 0;
+}
+
+.c2{
+    padding-bottom: 85%;
+    animation-duration: .2s;
+}
+
+.c1{
+    padding-bottom: 67%;
+    animation-duration: .6s;
+}
+
+.c0{
+    padding-bottom: 41%;
+    animation-duration: 1s;
+    border-radius: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.item .palette a {
+    display: none;
+}
+
+.item{
+    max-width: 56vh;
+    margin: 3vh auto 7vh;
+}
+
+.place span {
+    position: absolute;
+    text-align: center;
+    transition: all .2s;
+    bottom: 0;
+    color: #fff;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, .1);
+    padding: 3px 6px;
+    border-radius: 0 6px 0 0;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.place span:hover {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.place:hover span {
+    opacity: 1;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item .actions {
+    position: relative;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.button {
+    cursor: pointer;
+    padding: 0 14px;
+}
+
+.icon[icon=like] {
+    background-position-x: -150px;
+}
+
+.icon {
+    margin-left: -6px;
+    margin-right: 2px;
+    width: 30px;
+    height: 100%;
+    flex-shrink: 0;
+    background-image: url(../../../assets/color-hunt-icons.svg);
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 0;
+}
+
+.button:after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity .2s;
+    border-radius: 10px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.button, input {
+    background: #fff;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    height: 38px;
+    font-size: 14px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: color .2s, opacity .2s;
+}
+
+.button:hover {
+    color: #000;
+    opacity: 1;
+}
+
+.button:hover:after {
+    opacity: .02;
+}
+
+.button[status="true"] {
+    background-image: linear-gradient(90deg, #F4F4F4 0%, #EFEFEF 100%);
+    color: #000;
+    opacity: 1;
+    border-color: transparent;
+}
+
+.button[status="true"] .icon {
+    filter: brightness(0%);
+    opacity: .9;
+}
+ */
