@@ -1,9 +1,11 @@
 # NFactorial 2024: [Task 2](https://armansu.notion.site/Task-2-4587df2fbd5140e486cfaf813beb61d8)
 
 ## This is the copy of Colorhunt.co
-This project was developed by me in a short. I have no time right now so don't judge too hard, be cool.  
+### This project was developed by me in a short. I have no time right now so don't judge too hard, be cool.  
+
 You also can take a look of my very first project in pure html, css aslo in a short time.  
 This was a test project for me by one PM from KBTU. [tap me](https://kakimnsnv.github.io/)  
+
 Also i deployed front in github pages and backend on pythonanywhere.com.  
 But met bug when working with api and wasted lot of time and cause of lack of it i refused to use it. So you can test in on localhost.
 
