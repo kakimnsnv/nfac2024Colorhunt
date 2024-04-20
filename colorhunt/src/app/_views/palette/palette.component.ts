@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Palette, PaletteTest } from '../../_models/palette';
+import { Palette } from '../../_models/palette';
 import { SavedService } from '../../_services/saved.service';
 import { ClipboardService } from 'ngx-clipboard';
 import { ActivatedRoute } from '@angular/router';
@@ -11,17 +11,16 @@ import { PalettesService } from '../../_services/palettes.service';
   styleUrl: './palette.component.css',
 })
 export class PaletteComponent {
-  @Input() palette: PaletteTest | undefined;
+  @Input() palette!: Palette;
+  @Input() edit: boolean = false;
+  @Input() isNew: boolean = false;
   @Input() i: number = 0;
 
   constructor(
-    private route: ActivatedRoute,
     private savedService: SavedService,
     private palettesService: PalettesService,
     private clipboardService: ClipboardService
   ) {}
-
-  openColorPicker(vv: any) {}
 
   like(palette: Palette) {
     if (this.savedService.isSaved(palette)) {
@@ -31,6 +30,7 @@ export class PaletteComponent {
       palette.likes++;
       this.savedService.savePalette(palette);
     }
+    this.palettesService.updatePalette(palette);
   }
 
   isLiked(palette: Palette) {
@@ -46,5 +46,12 @@ export class PaletteComponent {
         ''
       );
     }, 1000);
+  }
+
+  del() {
+    this.palettesService.deletePalette(this.palette.id);
+  }
+  crt() {
+    this.palettesService.savePalette(this.palette);
   }
 }

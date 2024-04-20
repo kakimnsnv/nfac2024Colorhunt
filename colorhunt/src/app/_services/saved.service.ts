@@ -35,6 +35,6 @@ export class SavedService {
 
   isSaved(palette: Palette): boolean {
     const savedPalettes = this.getSavedPalettes();
-    return savedPalettes.some((p: Palette) => p.id === palette.id);
+    return savedPalettes.some((p: Palette) => p.id == palette.id);
   }
 }

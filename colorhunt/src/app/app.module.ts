@@ -14,7 +14,11 @@ import { PalettePageComponent } from './_views/palette-page/palette-page.compone
 import { ClipboardModule } from 'ngx-clipboard';
 import { SavedService } from './_services/saved.service';
 import { NewComponent } from './_views/new/new.component';
-import { HttpClientModule } from '@angular/common/http';
+import {
+  HttpClientModule,
+  provideHttpClient,
+  withFetch,
+} from '@angular/common/http';
 import { PalettesService } from './_services/palettes.service';
 
 @NgModule({
@@ -34,7 +38,7 @@ import { PalettesService } from './_services/palettes.service';
     HttpClientModule,
   ],
   bootstrap: [AppComponent],
-  providers: [SavedService, PalettesService],
+  providers: [SavedService, PalettesService, provideHttpClient(withFetch())],
   // providers: [provideClientHydration()],
 })
 export class AppModule {}

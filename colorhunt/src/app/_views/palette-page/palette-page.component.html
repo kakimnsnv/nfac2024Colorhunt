@@ -1,16 +1,32 @@
-<div class="page">
-    <div class="single" style="display: block;">
-        <div class="singleItem" *ngIf="palette != undefined; else create">
-            <app-palette [i]="0" [palette]="palette" />
+<div class="single" style="display: block;">
+    <div class="singleItem">
+        <app-palette [i]="0" [palette]="palette" [edit]="true" [isNew]="isNew" style="padding: auto 0; width: 20vw;" />
+        <div class="table">
+            <div class="balls row">
+                <input [style.background-color]="palette.color4" class="ball" type="color"
+                    placeholder="{{palette.color4}}" (input)="change();" [(ngModel)]="palette.color4">
+                <input [style.background-color]="palette.color3" class="ball" type="color"
+                    placeholder="{{palette.color3}}" (input)="change();" [(ngModel)]="palette.color3">
+                <input [style.background-color]="palette.color2" class="ball" type="color"
+                    placeholder="{{palette.color2}}" (input)="change();" [(ngModel)]="palette.color2">
+                <input [style.background-color]="palette.color1" class="ball" type="color"
+                    placeholder="{{palette.color1}}" (input)="change();" [(ngModel)]="palette.color1">
+            </div>
+            <div class="line"></div>
+            <div class="hex row">
+                <div>
+                    <div class="button" (click)="copy(palette.color4)">{{palette.color4}}</div>
+                </div>
+                <div>
+                    <div class="button" (click)="copy(palette.color3)">{{palette.color3}}</div>
+                </div>
+                <div>
+                    <div class="button" (click)="copy(palette.color2)">{{palette.color2}}</div>
+                </div>
+                <div>
+                    <div class="button" (click)="copy(palette.color1)">{{palette.color1}}</div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
-<ng-template #create>
-    <div class="singleItem">
-        <input id="color" type="color" title="colorpicker" [(ngModel)]="color">
-        {{color}}
-
-        <!-- <app-palette [i]="0" [palette]="{colors: ['000000', '000000', '000000', '000000', '000000'], likes: 0}" /> -->
-    </div>
-</ng-template>

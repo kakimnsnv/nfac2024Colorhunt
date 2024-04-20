@@ -1,7 +1,12 @@
-<div class="page">
-    <div class="feed global">
-        <div *ngFor="let palette of palettes; let i = index;">
-            <app-palette [palette]="palette" [i]="i" />
-        </div>
+<div class="feed global" *ngIf="loaded; else loading">
+    <div *ngFor="let palette of palettes; let i = index;">
+        <app-palette [palette]="palette" [i]="i" />
     </div>
 </div>
+
+
+<ng-template #loading>
+    <div class="loading">
+        <div class="loader">Loading...</div>
+    </div>
+</ng-template>
